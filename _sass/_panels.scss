@@ -1,0 +1,72 @@
+.panel-wrapper {
+	// @extend %center-in-wrapper;
+	letter-spacing: .4px;
+}
+
+// .panel-wrapper > div { margin-top: 2em;}
+
+.panelFull {
+	@extend %center-in-wrapper;
+	max-width: none;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 115%;
+	padding: 2.5rem;
+	min-height: 55vh;
+	color: white;
+	text-align: center;
+	background-size: cover;
+	background-position: center;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, .45);
+
+	&-text {
+		max-width: 700px;
+		margin-top: 0;
+		font-size: 1.1em;
+		line-height: 1.7;
+	}
+}
+
+.panelSplit {
+	@extend %center-in-wrapper;	
+	display: flex;
+
+	&.--reversed { flex-direction: row-reverse;}
+
+	&-image,
+	&-content {
+		flex-grow: 2;
+		width: 50%;
+		min-height: 35vh;
+		@media (min-width: $on-tablet){ min-height: 45vh;}
+		@media (min-width: $on-desktop){ min-height: 55vh;}
+	}
+
+	&-content {
+		padding: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;}
+		
+	&-title { text-align: center;}
+	
+	&-image {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;}
+
+	&-text {
+		font-size: 1.1em;
+		line-height: 1.7;
+		text-align: center;
+		margin-top: 0;}
+
+	&-link {
+		text-align: center;
+		font-weight: 600;
+
+		a:hover { color: darken($color: $brand-color, $amount: 30);}
+	}
+}

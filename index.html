@@ -1,0 +1,40 @@
+---
+layout: index
+---
+<div class='hero'>
+	{% include header.html %}
+	<!-- <div class='social'>
+		<ul class='social-links'>
+			<li class='social-link'><a href='#'>Facebook</a></li>
+			<li class='social-link'><a href='#'>Instagram</a></li>
+		</ul>
+	</div> -->
+</div>
+{% include ticker-contact.html %}
+<div class='panel-wrapper'>
+	{%
+		include panel-full.html
+		image='retro-blur.jpg'
+		title='Friendly Staff'
+		content='Dessert croissant liquorice pie muffin apple pie marshmallow pudding caramels. Topping tart donut cheesecake dragée. Fruitcake I love I love sweet roll pie halvah cake gingerbread chupa chups.'
+	%}
+	{%
+		include panel-split.html
+		image='baby-elephant.jpg'
+		title="Baby's First Cake"
+		content='Gingerbread sweet gingerbread jelly beans marshmallow candy canes ice cream. Topping halvah cake. Chupa chups icing bear claw sweet ice cream I love toffee gummi bears liquorice. Oat cake biscuit I love I love caramels bonbon.'
+		link="/#"
+		linkText="View the Menu »"
+	%}
+	{%
+		include panel-split.html
+		reversed=true
+		image='cherry-blossom.jpg'
+		title='Inspired Wedding Cakes'
+		content='Dessert croissant liquorice pie muffin apple pie marshmallow pudding caramels. Topping tart donut cheesecake dragée. Fruitcake I love I love sweet roll pie halvah cake gingerbread chupa chups.'
+		link="/gallery"
+		linkText="View the Gallery »"
+	%}
+</div>
+<!-- {% include profile.html %} -->
+<!-- {% include ticker-contact.html %} -->

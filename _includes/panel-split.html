@@ -1,0 +1,8 @@
+<div class="panelSplit{% if include.reversed %} --reversed{% endif %}">
+	 <div class="panelSplit-image" style="background-image: url(/images/{{include.image}})"></div>
+	 <div class="panelSplit-content">
+		 <h1 class="panelSplit-title">{{include.title}}</h1>
+		 <p class="panelSplit-text">{{include.content}}</p>
+		 {% if include.link %}<p class="panelSplit-link"><a href="{{include.link}}">{{include.linkText}}</a></p>{% endif %}
+	 </div>
+</div>

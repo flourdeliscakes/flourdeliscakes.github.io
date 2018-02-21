@@ -1,0 +1,19 @@
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/manifest.json">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5"> -->
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<!-- <link href="https://fonts.googleapis.com/css?family=Alegreya:400,500,700,800" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Karma:400,700|Open+Sans" rel="stylesheet">
+	<!-- <script src="js/main.js"></script> -->
+</head>

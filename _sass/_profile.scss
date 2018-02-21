@@ -1,0 +1,21 @@
+$repeating-width: 10px;
+
+.profile {
+	@extend %center-in-wrapper;
+	padding-top: 1rem;
+	
+	&-wrapper {
+		background: repeating-linear-gradient(
+			-45deg,
+			rgba($brand-color, .3),
+			rgba($brand-color, .3) $repeating-width,
+			rgba($brand-color, .375) $repeating-width,
+			rgba($brand-color, .375) $repeating-width * 2
+		);
+	}
+
+	&-meet-the-owner {
+		display: block;
+		margin: 0 auto;
+	}
+}
