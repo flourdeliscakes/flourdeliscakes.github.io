@@ -12,7 +12,7 @@ a, a:visited {
 	text-decoration: none;
 	transition: color .11s ease-in;}
 
-a::after {
+a:not(.no-underline)::after {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -31,3 +31,5 @@ a:hover {
 h1,
 h2,
 h3 { font-family: 'Karma', serif;}
+
+p { line-height: 1.7;}

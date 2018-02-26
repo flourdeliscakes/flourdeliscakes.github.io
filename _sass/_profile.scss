@@ -1,21 +1,73 @@
-$repeating-width: 10px;
+$repeating-gradient-width: 10px;
 
 .profile {
-	@extend %center-in-wrapper;
-	padding-top: 1rem;
+	margin: 0 auto;
+	// padding-top: .5rem;
+	padding: 0 30px;
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media (min-width: $on-tablet){
+		flex-direction: row;
+		align-items: start;}
 	
 	&-wrapper {
-		background: repeating-linear-gradient(
-			-45deg,
-			rgba($brand-color, .3),
-			rgba($brand-color, .3) $repeating-width,
-			rgba($brand-color, .375) $repeating-width,
-			rgba($brand-color, .375) $repeating-width * 2
-		);
+		margin-top: 1.5rem;
+		padding: 45px 0;
+		background:
+			repeating-linear-gradient(
+				-45deg,
+				rgba($brand-color, .25),
+				rgba($brand-color, .25) $repeating-gradient-width,
+				rgba($brand-color, .325) $repeating-gradient-width,
+				rgba($brand-color, .325) $repeating-gradient-width * 2
+			),
+			repeating-linear-gradient(
+				45deg,
+				rgba($brand-color, .25),
+				rgba($brand-color, .25) $repeating-gradient-width,
+				rgba($brand-color, .325) $repeating-gradient-width,
+				rgba($brand-color, .325) $repeating-gradient-width * 2
+			);
 	}
 
-	&-meet-the-owner {
+	&-cta {
 		display: block;
-		margin: 0 auto;
+		margin-bottom: 15px;
+		
+		&.narrow-screen {
+			margin: 0 auto 30px;
+			@media (min-width: $on-tablet) { display: none;}
+		}
+
+		&.wide-screen {
+			display: none;
+			@media (min-width: $on-tablet){ display: block;}
+		}
+	}
+
+	&-id { text-align: center;}
+
+	&-portrait {
+		width: 150px;
+		height: auto;
+		border: 5px solid white;
+		border-radius: 100%;
+		@include deepShadow(.5);
+		@media (min-width: $on-tablet){
+			width: 185px;
+			border: 8px solid white;
+			// margin-top: 65px;
+		}
+	}
+
+	&-name {
+		color: #1c3d51;
+		text-align: center;}
+
+	&-text {
+		margin: 0;
+		@media (min-width: $on-tablet){ padding-left: 45px;}
 	}
 }

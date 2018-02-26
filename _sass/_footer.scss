@@ -1,5 +1,6 @@
 footer {
-	background: saturate(darken($color: $brand-color, $amount: 50), 30) url(/images/footerTile.jpg) left top/32px auto;
+	// background: saturate(darken($color: $brand-color, $amount: 50), 30) url(/images/footerTile.jpg) left top/32px auto;
+	background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 2px, rgba(0, 0, 0, 0.825) 2px, rgba(0, 0, 0, 0.825) 30px);
 	height: 20vh;
 	color: #EEE;
 	padding: 1.25rem 0;

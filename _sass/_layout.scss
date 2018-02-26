@@ -1,24 +1,3 @@
-.nav, .social {
-	font-size: .9rem;
-	@media (min-width: $on-tablet){ font-size: 1.1rem;}
-	@media (min-width: $on-desktop){ font-size: 1.2rem;}
-	
-	&-links {
-		list-style: none;
-		padding: 0;
-		margin: 0;}
-
-	&-link {
-		display: inline-block;
-		padding: 0 .6em;}
-}
-
-header {
-	margin: 2rem auto;
-	text-align: center;
-	@media (min-width: $on-tablet){ margin: 2.25rem auto;}
-}
-
 .message {
 	text-align: center;
 	background-color: #333;
@@ -42,18 +21,16 @@ header {
 	}
 }
 
-.logo { margin-bottom: 5px;}
-
 .hero {
-	background: url(/images/heroCake.jpg) no-repeat center bottom/auto 90%;
-	font-family: 'Karma', serif;
-	height: 80vh;
+	background: #FFF url(/images/heroCake.jpg) no-repeat center bottom/auto 90%;
+	height: 70vh;
 	border-bottom: 1px solid #C2C2C2;
 	display: flex;
 	flex-direction: column;
-	// padding-bottom: 1.5rem;
 	text-align: center;
 	justify-content: space-between;
+	position: relative;
+	z-index: 15;
 }
 
 .social {
@@ -64,10 +41,12 @@ header {
 
 .ticker {
 	text-align: center;
-	background-color: $brand-color;
+	background: darken(desaturate($brand-color, 15%), 25%) linear-gradient(0deg, darken(desaturate($brand-color, 15%), 25%), darken($brand-color, 5%));
 	color: white;
 	font-weight: 500;
 	padding: 1.25rem 0;
 
-	p { margin: 0;}
+	p {
+		margin: 0;
+		line-height: 1.5;}
 }

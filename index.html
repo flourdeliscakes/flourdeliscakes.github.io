@@ -2,7 +2,7 @@
 layout: index
 ---
 <div class='hero'>
-	{% include header.html %}
+	{% include header-normal.html %}
 	<!-- <div class='social'>
 		<ul class='social-links'>
 			<li class='social-link'><a href='#'>Facebook</a></li>
@@ -10,6 +10,7 @@ layout: index
 		</ul>
 	</div> -->
 </div>
+{% include header-sticky.html %}
 {% include ticker-contact.html %}
 <div class='panel-wrapper'>
 	{%
@@ -36,5 +37,5 @@ layout: index
 		linkText="View the Gallery »"
 	%}
 </div>
-<!-- {% include profile.html %} -->
-<!-- {% include ticker-contact.html %} -->
+{% include profile.html %}
+{% include ticker-contact.html %}
